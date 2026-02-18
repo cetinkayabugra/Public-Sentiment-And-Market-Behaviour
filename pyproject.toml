@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "market-context-intelligence"
+version = "0.1.0"
+description = "Research tool for understanding public sentiment and market behaviour"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26.0",
+  "pandas>=2.2.0",
+  "python-dotenv>=1.0.1",
+  "requests>=2.31.0",
+  "scipy>=1.12.0",
+  "statsmodels>=0.14.1",
+  "streamlit>=1.42.0",
+  "fpdf2>=2.8.2",
+  "torch>=2.2.0",
+  "transformers>=4.48.0",
+  "yfinance>=0.2.54",
+]
+
+[project.scripts]
+market-context-tool = "sentiment_market_tool.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
